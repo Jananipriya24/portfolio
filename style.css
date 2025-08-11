@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-light: #3b82f6;
+    --primary-dark: #2563eb;
+    --dark-bg: #1f2937;
+    --light-bg: #f3f4f6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-light);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.skill-bar {
+    transition: width 1.5s ease;
+}
+
+.timeline-container {
+    border-left: 2px solid var(--primary-light);
+}
+
+.dark .timeline-container {
+    border-color: var(--primary-dark);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 1.5rem; /* Matches pl-6 in HTML */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-light);
+}
+
+.dark .timeline-item::before {
+    background-color: var(--primary-dark);
+}
+
+.timeline-item > div:first-child {
+    position: absolute;
+    left: -0.5rem; /* Adjust to center the dot on the line */
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary-light);
+    border-radius: 9999px; /* rounded-full */
+    margin-top: 0.25rem; /* mt-1 */
+    border: 4px solid var(--light-bg); /* border-4 border-white */
+}
+
+.dark .timeline-item > div:first-child {
+    border-color: var(--dark-bg); /* dark:border-gray-900 */
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
