@@ -205,7 +205,7 @@ From wireframes to deployment, I contribute across the entire digital product li
                     </div>
                     
                     <div class="flex">
-  <a href="Janani Priya R_Resume.pdf" class="ml-56 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center">
+  <a href="Janani Priya R_Resume.pdf" class="ml-0 md:ml-56 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
     </svg>
@@ -226,7 +226,7 @@ From wireframes to deployment, I contribute across the entire digital product li
                 <span class="bg-blue-500 h-1 w-16 absolute -bottom-4 left-1/2 transform -translate-x-1/2"></span>
                 My Projects
             </h2>
-          <div class="flex gap-4 justify-center w-full ml-60"> 
+          <div class="flex gap-4 justify-center w-full md:ml-60">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
                     <div class="relative overflow-hidden h-48">
@@ -254,7 +254,7 @@ From wireframes to deployment, I contribute across the entire digital product li
                 
                 <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
                     <div class="relative overflow-hidden h-48">
-                        <img src="emp.png" alt="E-commerce product page showing product images, description, and add to cart button" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <img src="women.png" alt="E-commerce product page showing product images, description, and add to cart button" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
                             <h3 class="text-white text-xl font-bold">EMPOWER HER</h3>
                         </div>
@@ -414,5 +414,10 @@ Created a standee design for an event in Navi Mumbai following branding standard
     </footer>
     
     <script src="script.js"></script>
+    <script>
+  document.getElementById("mobile-menu-button").addEventListener("click", function () {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+  });
+</script>
 </body>
 </html>
